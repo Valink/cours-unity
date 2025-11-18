@@ -388,7 +388,7 @@ MonoBehaviour:
   onDieEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1373303227}
+      - m_Target: {fileID: 8300000, guid: bf70ed5b2d79d044e9710576a6ea3989, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
