@@ -527,7 +527,7 @@ PrefabInstance:
     - target: {fileID: 7664446213016704377, guid: 5544916be247c764688c5f311964ba46, type: 3}
       propertyPath: buttonToEnableRotationAction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -6269832784311911697, guid: b1db16254ee8f1b469f1f867887da669, type: 3}
     - target: {fileID: 7787459894887630453, guid: 5544916be247c764688c5f311964ba46, type: 3}
       propertyPath: m_Actions
       value: 

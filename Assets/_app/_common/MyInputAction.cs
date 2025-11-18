@@ -95,7 +95,7 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
                     ""name"": ""shoot"",
                     ""type"": ""Button"",
                     ""id"": ""668f6705-67fe-4080-90d1-cb6a064fd315"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -317,7 +317,7 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
                     ""name"": ""EnableRotate"",
                     ""type"": ""Button"",
                     ""id"": ""824e66c9-4402-4fc9-96b1-dfea2153f4be"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
