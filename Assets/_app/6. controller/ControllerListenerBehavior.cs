@@ -32,6 +32,7 @@ public class ControllerListenerBehavior : MonoBehaviour
     public void Spawn()
     {
         var spawnedObject = Instantiate(prefabToSpawn, container.transform);
+        spawnedObject.transform.position = transform.position;
         spawnedObject.GetComponent<Rigidbody>().AddForce(transform.forward * forceSpawn);
         Destroy(spawnedObject, 5);
     }

@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 61594098}
-  prefabToSpawn: {fileID: 3363205452079744618, guid: 27170c70f0a35e0429ef28b54ad6b57b, type: 3}
+  prefabToSpawn: {fileID: 3991965461333730336, guid: 58d1d163db61b1e478d046b8ded5815d, type: 3}
   spawnRotation: {x: 33, y: 22, z: 11}
 --- !u!4 &61594100
 Transform:

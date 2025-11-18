@@ -272,6 +272,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2814750478230243257, guid: 4c96fb934871c2b48afaa07bb5d29ca4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814750478230243257, guid: 4c96fb934871c2b48afaa07bb5d29ca4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9091909866961184923, guid: 4c96fb934871c2b48afaa07bb5d29ca4, type: 3}
       propertyPath: m_Name
       value: floor
@@ -571,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8438022401241680027, guid: 02252fc96bf1ec644b5041b48e2b6710, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

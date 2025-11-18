@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerWithCustomEventBehavior : MonoBehaviour
 {
-    public UnityEngine.Events.UnityEvent onTriggerEnterEvent;
-    public UnityEngine.Events.UnityEvent onTriggerExitEvent;
+    public UnityEvent onTriggerEnterEvent;
+    public UnityEvent onTriggerExitEvent;
     
     private void OnTriggerEnter(Collider otherCollider)
     {
