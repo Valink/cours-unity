@@ -1,4 +1,4 @@
-using System;
+    using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -7,7 +7,7 @@ public class SpawnerBehavior : MonoBehaviour
 {
     [SerializeField] private GameObject container;
     [SerializeField] private GameObject prefabToSpawn;
-    [FormerlySerializedAs("instantiatedRotation")] [SerializeField] private Vector3 spawnRotation;
+    [SerializeField] private Vector3 spawnRotation;
 
     private async void Awake()
     {
