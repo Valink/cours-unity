@@ -118,6 +118,15 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""f622367c-e6f7-483c-876f-c26754bbd195"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -307,6 +316,28 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f31e9476-b227-4894-b9cb-98edf7c053cb"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e078a2e-3b56-43c3-a6d9-2b754389c7df"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Controller"",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -447,6 +478,7 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
         m_firstPerson_shoot = m_firstPerson.FindAction("shoot", throwIfNotFound: true);
         m_firstPerson_Rotate = m_firstPerson.FindAction("Rotate", throwIfNotFound: true);
         m_firstPerson_Move = m_firstPerson.FindAction("Move", throwIfNotFound: true);
+        m_firstPerson_jump = m_firstPerson.FindAction("jump", throwIfNotFound: true);
         // spectator
         m_spectator = asset.FindActionMap("spectator", throwIfNotFound: true);
         m_spectator_EnableRotate = m_spectator.FindAction("EnableRotate", throwIfNotFound: true);
@@ -536,6 +568,7 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_firstPerson_shoot;
     private readonly InputAction m_firstPerson_Rotate;
     private readonly InputAction m_firstPerson_Move;
+    private readonly InputAction m_firstPerson_jump;
     /// <summary>
     /// Provides access to input actions defined in input action map "firstPerson".
     /// </summary>
@@ -559,6 +592,10 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "firstPerson/Move".
         /// </summary>
         public InputAction @Move => m_Wrapper.m_firstPerson_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "firstPerson/jump".
+        /// </summary>
+        public InputAction @jump => m_Wrapper.m_firstPerson_jump;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -594,6 +631,9 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @jump.started += instance.OnJump;
+            @jump.performed += instance.OnJump;
+            @jump.canceled += instance.OnJump;
         }
 
         /// <summary>
@@ -614,6 +654,9 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @jump.started -= instance.OnJump;
+            @jump.performed -= instance.OnJump;
+            @jump.canceled -= instance.OnJump;
         }
 
         /// <summary>
@@ -819,6 +862,13 @@ public partial class @MyInputAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnJump(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "spectator" which allows adding and removing callbacks.
